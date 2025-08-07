@@ -1,18 +1,16 @@
-
-🛒### **Retail Sales SQL Project**
+🛒**Retail Sales SQL Project**
 This project is a SQL-based analysis of a retail sales dataset using PostgreSQL and pgAdmin. It includes table creation, data cleaning, exploration, and analysis using various SQL queries.
 
 **Author**: Yasmeen Rafique | Data Analytics Enthusiast  
 📅 August 2025 | 📍 Pakistan
 
-🧱### **Project Structure**
+🧱**Project Structure**
 - Database Used: PostgreSQL
 - Tool: pgAdmin
 - File: retail_sales_analysis_p1.sql
 
-📂### **Table Structure**
+📂**Table Structure**
 ```sql
-
 CREATE TABLE retail_sales(
 		      transaction_id INT PRIMARY KEY, 
 			  sale_date DATE,
@@ -28,9 +26,8 @@ CREATE TABLE retail_sales(
            );
 ```
 
-- Data cleaning
+ **Data cleaning**
 ```sql
-
 SELECT *
 FROM retail_sales
 LIMIT 10;
@@ -93,29 +90,26 @@ WHERE
 	  total_sale IS NULL;
 ```
 
-- Data exploration:
+**Data exploration:**
 
-```sql
---**how many sales we have?**
+**how many sales we have?**
 ```sql
 SELECT COUNT(*) AS total_sales
 FROM retail_sales;
 
 ```
-
+**how many  unique customers we have?**
 ```sql
-- how many  unique customers we have?
 SELECT COUNT(DISTINCT customer_id) AS customers
 FROM retail_sales;
 ```
-
+**how many categories we have?**
 ```sql
-- how many categories we have?
 SELECT DISTINCT category 
 FROM retail_sales;
 ```
 
--Data analysis:
+**-Data analysis:**
 
 --**q1 Write a sql query to retrieve all columns for sales made on '2022-11-05' ?**
 ```sql
